@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet Détection de Malwares</title>
+  <title>Projet Price Tracker</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -26,17 +26,23 @@
       align-items: center;
     }
 
-    .lang-switch a {
-      color: #ff4d4d;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 17px;
-      transition: color 0.3s;
+.lang-switch a {
+  color: #ff4d4d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  transition: color 0.3s;
+}
+
+.lang-switch a:hover {
+  color: #ff7070;
+}
+
+    h1 {
+      color: #58a6ff;
+      text-align: center;
+      margin-bottom: 20px;
     }
-
-    .lang-switch a:hover { color: #ff7070; }
-
-    h1 { color: #58a6ff; text-align: center; margin-bottom: 20px; }
 
     .content {
       max-width: 900px;
@@ -47,7 +53,10 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
-    .tech { color: #7ee787; font-weight: bold; }
+    .tech {
+      color: #7ee787;
+      font-weight: bold;
+    }
 
     .links a {
       display: inline-block;
@@ -62,7 +71,9 @@
       transition: background 0.3s;
     }
 
-    .links a:hover { background-color: #2ea043; }
+    .links a:hover {
+      background-color: #2ea043;
+    }
 
     .btn-back {
       display: inline-block;
@@ -76,10 +87,18 @@
       margin-bottom: 20px;
     }
 
-    .btn-back:hover { background-color: #2ea043; }
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
 
-    ul { padding-left: 20px; }
-    h2 { color: #58a6ff; margin-top: 30px; }
+    ul {
+      padding-left: 20px;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-top: 30px;
+    }
 
     .video-placeholder {
       background-color: #0d1117;
@@ -104,50 +123,68 @@
 <body>
 
 <nav>
-  <a href="projectsfr.html" class="btn-back">⬅ Retour aux projets</a>
- 
+  <a href="projects.html" class="btn-back">⬅ Retour aux Projets</a>
+  <div class="lang-switch">
+    <a href="project3.html">See English Version</a>
+  </div>
 </nav>
 
-<h1>Projet Détection de Malwares</h1>
+  <h1>Projet Price Tracker</h1>
 
-<div class="content">
+  <div class="content">
 
-  <h2>💡 Compétences & Défis Réels</h2>
-  <p class="skills">
-    Développement d’un système de détection de malwares avec Machine Learning sur le dataset <strong>EMBER</strong>.  
-    J’ai entraîné des modèles <strong>Random Forest</strong> et <strong>Réseaux de Neurones</strong> pour classifier les fichiers binaires en malveillants ou bénins.  
-    Ce projet m’a permis de gérer le prétraitement des données, l’évaluation de modèles et l’optimisation des performances pour un projet de sécurité informatique réaliste.
-  </p>
+    <h2>💡 Compétences & Défis Réels</h2>
+    <p class="skills">
+      Dans ce projet, j’ai affronté plusieurs défis techniques réels qui ont énormément renforcé mes compétences de résolution de problèmes.  
+      J’ai configuré et débogué les connexions PostgreSQL entre WSL et Windows, modifié des fichiers essentiels comme <code>pg_hba.conf</code> et <code>postgresql.conf</code>, ajusté les règles du pare-feu pour autoriser le port PostgreSQL, et mis en place un environnement Airflow propre avec Webserver et Scheduler.  
+      J’ai aussi géré des problèmes de données complexes, comme la conversion de chaînes de prix en float malgré des espaces qui causaient des erreurs, et j’ai complètement débogué le système d’alerte email.  
+      La résolution de ces problèmes m’a appris à gérer un environnement quasi-production, ce qui rend ces compétences bien plus précieuses que n’importe quelle compétence technique facile à apprendre.
+    </p>
 
-  <h2>1️⃣ Prétraitement et Analyse des Données</h2>
-  <ul>
-    <li>Extraction et nettoyage des features à partir de fichiers binaires.</li>
-    <li>Normalisation et encodage des données pour l’apprentissage automatique.</li>
-  </ul>
+    <h2>1️⃣ Développement avec Flask</h2>
+    <ul>
+      <li>Maîtrise des <span class="tech">routes Flask</span> et du <span class="tech">développement d’API</span>.</li>
+      <li>Intégration de Flask avec le <span class="tech">HTML</span> pour créer une vraie application web.</li>
+      <li>Mise en place de <span class="tech">sessions sécurisées</span> qui expirent automatiquement après 3 minutes.</li>
+      <li>Expérience en communication client-serveur via API Flask.</li>
+    </ul>
 
-  <h2>2️⃣ Modélisation avec ML & Deep Learning</h2>
-  <ul>
-    <li>Entraînement de modèles <span class="tech">Random Forest</span> pour baseline solide.</li>
-    <li>Construction et entraînement de <span class="tech">Neural Networks</span> pour améliorer la précision.</li>
-    <li>Évaluation avec métriques pertinentes : précision, recall, F1-score.</li>
-  </ul>
+    <h2>2️⃣ Orchestration avec Airflow</h2>
+    <ul>
+      <li>Automatisation du pipeline via <span class="tech">Airflow</span> (DAG exécuté quotidiennement).</li>
+      <li>Connexion d’Airflow dans WSL avec <span class="tech">PostgreSQL</span> sous Windows.</li>
+    </ul>
 
-  <h2>🎥 Démonstration Vidéo</h2>
-  <p>
-    <a href="projet3.mp4" target="_blank" 
-       style="display:inline-block; background-color:#238636; color:white; 
-              padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:bold; transition:background 0.3s;">
-      ▶ Watch Project Video
-    </a>
-  </p>
+    <h2>3️⃣ Scraping & Stockage des Données</h2>
+    <ul>
+      <li>Scraping des prix de produits via <span class="tech">BeautifulSoup</span> et <span class="tech">Requests</span>.</li>
+      <li>Stockage des prix dans une table <code>scrap</code> pour conserver l’historique.</li>
+      <li>Utilisation des tables <code>tracking</code> et <code>user</code> pour le suivi produit et l’authentification/alertes.</li>
+      <li>Nettoyage et traitement des données de prix pour permettre une comparaison fiable avec les seuils définis par l’utilisateur.</li>
+    </ul>
 
-  <p class="tech">Technologies utilisées : Python, Scikit-Learn, TensorFlow, Pandas</p>
+    <h2>4️⃣ Gestion des Alertes Email</h2>
+    <ul>
+      <li>Envoi d’alertes lorsque le prix récupéré est inférieur ou égal au seuil défini par l’utilisateur, via une clé d’application sécurisée.</li>
+      <li>Suppression automatique du produit dans <code>tracking</code> et <code>scrap</code> après envoi pour éviter les doublons.</li>
+      <li>Pipeline totalement automatisé : <span class="tech">scraping → stockage → comparaison → notification → nettoyage</span>.</li>
+    </ul>
 
-  <div class="links">
-    <a href="https://github.com/zakaria/malware-detection" target="_blank">🔗 Voir le code</a>
+    <h2>🎥 Vidéo Démonstration</h2>
+<p>
+  <a href="projet3.mp4" target="_blank" 
+     style="display:inline-block; background-color:#238636; color:white; 
+            padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:bold; transition:background 0.3s;">
+    ▶ Voir la vidéo du Projet 3
+  </a>
+</p>
+
+    <p class="tech">Technologies utilisées : Python, Flask, HTML, BeautifulSoup, Requests, PostgreSQL, Airflow, SMTP</p>
+
+    <div class="links">
+      <a href="https://github.com/zakaria/price-tracker" target="_blank">🔗 Voir le Code</a>
+    </div>
   </div>
-
-</div>
 
 </body>
 </html>
