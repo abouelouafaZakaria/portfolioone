@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Data Pipeline GCP</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.8;
+      padding: 40px;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 20px 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lang-switch a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      transition: color 0.3s;
+    }
+
+    .lang-switch a:hover { color: #ff7070; }
+
+    h1 { color: #58a6ff; text-align: center; margin-bottom: 20px; }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .tech { color: #7ee787; font-weight: bold; }
+
+    .links a {
+      display: inline-block;
+      margin-top: 12px;
+      margin-right: 10px;
+      background-color: #238636;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .links a:hover { background-color: #2ea043; }
+
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+
+    .btn-back:hover { background-color: #2ea043; }
+
+    ul { padding-left: 20px; }
+    h2 { color: #58a6ff; margin-top: 30px; }
+
+    .video-placeholder {
+      background-color: #0d1117;
+      border: 2px dashed #7ee787;
+      text-align: center;
+      padding: 40px;
+      margin-top: 20px;
+      border-radius: 10px;
+      font-style: italic;
+      color: #7ee787;
+    }
+
+    p.skills {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="projectsfr.html" class="btn-back">⬅ Retour aux projets</a>
+</nav>
+
+<h1>Projet Pipeline de données GCP</h1>
+
+<div class="content">
+
+  <h2>💡 Compétences & Défis Réels</h2>
+  <p class="skills">
+    Ce projet m’a confronté à plusieurs défis pratiques en Data Engineering.  
+    J’ai conçu un pipeline entièrement automatisé pour l’ingestion, la transformation et le stockage des données sur <strong>Google Cloud</strong>.  
+    L’orchestration avec <strong>Airflow</strong>, le traitement distribué avec <strong>Spark</strong>, et la gestion de BigQuery m’ont permis de renforcer mes compétences en pipelines complexes et en résolution de problèmes techniques réels.
+  </p>
+
+  <h2>1️⃣ Orchestration avec Airflow</h2>
+  <ul>
+    <li>Création et gestion de <span class="tech">DAGs Airflow</span> pour automatiser l’ingestion quotidienne des données.</li>
+    <li>Déploiement et supervision des tâches dans un environnement cloud sécurisé.</li>
+  </ul>
+
+  <h2>2️⃣ Traitement des données avec PySpark</h2>
+  <ul>
+    <li>Transformation et nettoyage de gros volumes de données.</li>
+    <li>Optimisation des performances grâce aux RDD et DataFrames.</li>
+  </ul>
+
+  <h2>3️⃣ Stockage et analyse dans BigQuery</h2>
+  <ul>
+    <li>Création de tables et vues optimisées pour les analyses.</li>
+    <li>Gestion des permissions et sécurité des données sensibles.</li>
+  </ul>
+
+  <h2>🎥 Démonstration Vidéo</h2>
+  <div class="video-placeholder">
+    Une vidéo peut être ajoutée ici pour montrer le pipeline complet :  
+    ingestion → transformation → stockage → monitoring Airflow.
+  </div>
+
+  <p class="tech">Technologies utilisées : Airflow, PySpark, BigQuery, Docker, GCP</p>
+
+  <div class="links">
+    <a href="https://github.com/zakaria/gcp-data-pipeline" target="_blank">🔗 Voir le code</a>
+  </div>
+
+</div>
+
+</body>
+</html>

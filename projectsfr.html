@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets - Zakaria Abou El Ouafa</title>
+  <meta name="description" content="Projets de Zakaria Abou El Ouafa – Data & Cloud Engineer : pipelines GCP, détection de malwares avec ML, automatisation et systèmes backend.">
+  <meta name="author" content="ABOU ELOUAFA Zakaria">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #000000, #001f3f);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #111;
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      z-index: 100;
+    }
+    nav ul { display: flex; list-style: none; gap: 35px; flex-wrap: wrap; }
+    nav ul li { position: relative; }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+      padding: 5px 0;
+      transition: all 0.3s;
+      position: relative;
+    }
+    nav ul li a:hover {
+      color: #00f2ff;
+      text-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+      transform: translateY(-2px);
+    }
+    nav ul li a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00f2ff, #00d9ff, #00f2ff);
+      transition: width 0.4s ease;
+      box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+    }
+    nav ul li a:hover::before { width: 100%; }
+    nav ul li a.active {
+      color: #00f2ff;
+      text-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+    }
+    nav ul li a[href$=".pdf"] {
+      background: linear-gradient(135deg, #00f2ff, #0099ff);
+      color: black;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      box-shadow: 0 5px 20px rgba(0, 242, 255, 0.4);
+      transition: all 0.3s;
+    }
+    nav ul li a[href$=".pdf"]:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(135deg, #0099ff, #00f2ff);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      color: #00aced;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    header p { color: #dcdcdc; font-size: 1.2em; }
+
+    /* ===== PROJECTS SECTION ===== */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      padding: 60px 100px;
+      position: relative;
+      z-index: 1;
+    }
+    .project-card {
+      background: rgba(20, 30, 50, 0.8);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      border-left: 5px solid #00aced;
+      padding: 30px;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 172, 237, 0.2);
+    }
+    .project-card h2 { color: #00aced; margin-bottom: 15px; font-size: 1.4em; }
+    .project-card p { color: #dcdcdc; font-size: 1.05em; margin-bottom: 15px; line-height: 1.7; }
+    .tech {
+      font-size: 0.95em;
+      margin: 15px 0;
+      color: #00aced;
+      padding: 10px;
+      background: rgba(0, 172, 237, 0.1);
+      border-left: 3px solid #00aced;
+      border-radius: 5px;
+    }
+    .links { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .links a {
+      display: inline-block;
+      background: #00aced;
+      color: black;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      font-size: 0.95em;
+    }
+    .links a:hover { background: #0084b4; transform: translateY(-2px); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: #aaa;
+      font-size: 0.95em;
+      border-top: 1px solid #333;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) { .projects-container { padding: 50px 60px; } header h1 { font-size: 2.5em; } }
+    @media (max-width: 900px) {
+      nav { justify-content: center; padding: 15px 20px; }
+      .projects-container { padding: 40px 30px; grid-template-columns: 1fr; }
+      header h1 { font-size: 2em; }
+    }
+    @media (max-width: 600px) {
+      nav ul { flex-direction: column; gap: 12px; align-items: center; }
+      .projects-container { padding: 30px 20px; }
+      header { padding: 60px 20px 30px; }
+      header h1 { font-size: 1.8em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <ul>
+      <li><a href="indexfr.html">À propos</a></li>
+      <li><a href="skillsfr.html">Compétences</a></li>
+      <li><a href="projectsfr.html" class="active">Projets</a></li>
+      <li><a href="contactfr.html">Contact</a></li>
+      <li><a href="ABOU_ELOUAFA_Zakaria_CV.pdf" target="_blank" download>Télécharger CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>🚀 Mes Projets</h1>
+    <p>Découvrez quelques-uns de mes projets phares en Data & Cloud ci-dessous.</p>
+  </header>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="projects-container">
+       
+    <!-- Projet 1 -->
+    <div class="project-card">
+      <h2>Pipeline de données complet sur GCP</h2>
+      <p>
+        Création d'un pipeline de données entièrement automatisé pour l'ingestion, la transformation
+        et le stockage des données métiers avec <strong>Airflow</strong> et <strong>Spark</strong> sur
+        <strong>Google Cloud</strong>.
+      </p>
+      <p class="tech">📦 Airflow, PySpark, BigQuery, Docker, GCP</p>
+      <div class="links">
+        <a href="https://github.com" target="_blank">Voir le code</a>
+        <a href="project1fr.html">En savoir plus</a>
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+      <h2>Suivi des prix avec BeautifulSoup</h2>
+      <p>
+        Développement d'un tracker de prix en Python qui surveille les prix de produits sur les sites e-commerce.
+        Envoie des notifications par email lorsque le prix atteint l'objectif.
+      </p>
+      <p class="tech">📦 Python, BeautifulSoup, Requests, SMTP, Pandas</p>
+      <div class="links">
+        <a href="https://github.com" target="_blank">Voir le code</a>
+        <a href="projet3fr.html">En savoir plus</a>
+      </div>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-card">
+      <h2>Détection de malwares avec ML</h2>
+      <p>
+        Système de détection de malwares entraîné sur le <strong>dataset EMBER</strong>
+        utilisant <strong>Random Forest</strong> et <strong>Réseaux de Neurones</strong> pour classifier
+        les fichiers binaires en malveillants ou bénins.
+      </p>
+      <p class="tech">📦 Python, Scikit-Learn, TensorFlow, Pandas</p>
+      <div class="links">
+        <a href="https://github.com" target="_blank">Voir le code</a>
+        <a href="project2fr.html">En savoir plus</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Zakaria Abou El Ouafa
+  </footer>
+</body>
+</html>

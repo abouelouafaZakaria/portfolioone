@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compétences Python & API REST - Zakaria Abou El Ouafa</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #000000, #002b36);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding: 40px;
+      position: relative;
+    }
+
+    .content {
+      padding: 60px 100px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1.2s ease;
+      position: relative;
+    }
+
+    h1 {
+      color: #00aced;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 0 0 15px rgba(0,172,237,0.4);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-left: 5px solid #00aced;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,172,237,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,172,237,0.5);
+    }
+
+    .skill h2 {
+      color: #00aced;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .skill p {
+      color: #ccc;
+      font-size: 1em;
+    }
+
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 200;
+    }
+
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        padding: 40px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="skillsfr.html" class="btn-back">⬅ Retour aux Compétences</a>
+
+  <div class="content">
+    <h1>Python & API REST</h1>
+
+    <div class="skills-grid">
+
+      <div class="skill">
+        <h2>Flask 🌐</h2>
+        <p>Développement d'API REST légères avec <strong>Flask</strong>. Création de routes, gestion des cycles requête/réponse et intégration avec des bases de données via <strong>SQLAlchemy</strong>.</p>
+      </div>
+
+      <div class="skill">
+        <h2>FastAPI ⚡</h2>
+        <p>Création d'API performantes avec <strong>FastAPI</strong>, utilisant la documentation automatique <strong>OpenAPI</strong> et des endpoints asynchrones pour une efficacité maximale.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Opérations CRUD 🧱</h2>
+        <p>Conception et implémentation des endpoints Create, Read, Update, Delete selon les principes REST. Validation et sérialisation avec <strong>Pydantic</strong>.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Documentation API 📘</h2>
+        <p>Utilisation de <strong>Swagger UI</strong> et <strong>ReDoc</strong> pour générer automatiquement une documentation claire et interactive des endpoints REST.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Intégration Base de Données 🗃️</h2>
+        <p>Connexion des API aux bases de données relationnelles (MySQL, PostgreSQL) via <strong>SQLAlchemy ORM</strong>. Gestion des migrations avec <strong>Alembic</strong>.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Versioning & Tests 🧪</h2>
+        <p>Implémentation du <strong>versioning des API</strong> et tests automatisés avec <strong>pytest</strong> pour garantir fiabilité et compatibilité.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Zakaria Abou El Ouafa
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning & AI - Zakaria Abou El Ouafa</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #000000, #001f3f);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin: 20px;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      color: #00aced;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 0 0 15px rgba(0,172,237,0.4);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .skill {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-left: 5px solid #00aced;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,172,237,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,172,237,0.5);
+    }
+
+    .skill h2 {
+      color: #00aced;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .skill p {
+      color: #ccc;
+      font-size: 1em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="skills.html" class="btn-back">⬅ Back to Skills</a>
+
+  <div class="content">
+    <h1>Machine Learning & AI </h1>
+
+    <div class="skills-grid">
+      <div class="skill">
+        <h2>Feature Engineering Support</h2>
+        <p>Understanding features required by ML models to help data scientists structure and provide clean, well-organized data.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Model Integration</h2>
+        <p>Deploying and connecting trained ML models into data pipelines or batch/streaming workflows.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Data Validation for ML</h2>
+        <p>Ensuring input data quality, schema consistency, and handling anomalies to improve model performance in production.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Basic Understanding of ML Concepts</h2>
+        <p>Familiarity with supervised/unsupervised learning, regression/classification, and when each is used, to better support pipelines.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compétences Data Engineering - Zakaria Abou El Ouafa</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #000000, #001f3f);
+      color: white;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding: 40px;
+      position: relative;
+    }
+
+    .content {
+      padding: 60px 100px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1.2s ease;
+      position: relative;
+    }
+
+    h1 {
+      color: #00aced;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 0 0 15px rgba(0,172,237,0.4);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-left: 5px solid #00aced;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,172,237,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0,172,237,0.5);
+    }
+
+    .skill h2 {
+      color: #00aced;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .skill p {
+      color: #ccc;
+      font-size: 1em;
+    }
+
+    /* Bouton Back vert en haut à gauche */
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 200;
+    }
+
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        padding: 40px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="skillsfr.html" class="btn-back">⬅ Retour aux Compétences</a>
+
+  <div class="content">
+    <h1>Compétences Data Engineering</h1>
+
+    <div class="skills-grid">
+
+      <div class="skill">
+        <h2>Python 🐍</h2>
+        <p>Scripts d'automatisation et traitement de données avec <strong>Pandas</strong> et <strong>PySpark</strong>. Intégration dans des pipelines ETL pour l'extraction, le nettoyage et la transformation des données.</p>
+      </div>
+
+      <div class="skill">
+        <h2>SQL 🧩</h2>
+        <p>Maîtrise des requêtes complexes, <strong>CTE</strong> et <strong>fonctions fenêtres</strong>. Optimisation des requêtes et intégration de la logique SQL dans les workflows de données.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Apache Spark ⚡</h2>
+        <p>Création de jobs distribués pour le traitement batch et streaming. Utilisation de <strong>PySpark</strong> pour transformer, agréger et préparer de grands ensembles de données efficacement.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Apache Kafka 📡</h2>
+        <p>Gestion de pipelines de données temps réel entre microservices. Mise en place de <strong>producers</strong> et <strong>consumers</strong> pour l'ingestion continue et la livraison des données.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Hadoop & Hive 🏗️</h2>
+        <p>Travail avec le stockage <strong>HDFS</strong> et <strong>HiveQL</strong> pour les requêtes, transformations et analyses distribuées sur de grands ensembles de données.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Scala 🔢</h2>
+        <p>Développement de jobs Spark efficaces et parallèles avec <strong>Scala</strong>, en se concentrant sur la scalabilité, la tolérance aux pannes et l'optimisation des performances.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Modélisation des données 🧱</h2>
+        <p>Conception de schémas relationnels et analytiques (modèles en étoile et flocon). Structuration des données pour le reporting, l'analyse et les Data Warehouses.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Prétraitement des données</h2>
+        <p>Gestion des valeurs manquantes, normalisation, encodage des features et sélection des variables pour préparer les datasets à l'analyse et au machine learning.</p>
+      </div>
+
+      <div class="skill">
+        <h2>Administration Linux 🐧</h2>
+        <p>Expérience pratique avec <strong>RAID</strong>, <strong>LVM</strong>, partitionnement des disques, gestion des utilisateurs et permissions (<strong>ACLs, quotas</strong>), accès sécurisé via <strong>SSH</strong> et configuration de pare-feu/ports. Maîtrise des commandes Linux pour maintenance et automatisation.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Zakaria Abou El Ouafa
+  </footer>
+
+</body>
+</html>

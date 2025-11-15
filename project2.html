@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malware Detection using ML</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.8;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #58a6ff;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #7ee787;
+      border-left: 4px solid #7ee787;
+      padding-left: 10px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
+
+    .tech-list {
+      background-color: #161b22;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="projects.html" class="btn-back">⬅ Back to Projects</a>
+
+  <h1>Malware Detection using Machine Learning</h1>
+
+  <div class="section">
+    <h2>📋 Project Overview</h2>
+    <p>
+      This project focuses on building a machine learning model to detect malware in Windows executable files.
+      Using the <strong>EMBER dataset</strong>, I applied feature engineering and model training to distinguish
+      between benign and malicious binaries efficiently.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Approach</h2>
+    <img src="malware.jpg" alt="Malware Detection Illustration">
+    <p>
+      The dataset was preprocessed to handle missing and categorical values. Several algorithms were compared,
+      including Random Forest, Gradient Boosting, and a simple Neural Network. Evaluation metrics such as
+      <strong>accuracy</strong> and <strong>F1-score</strong> were used to assess performance.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🧰 Stack Used</h2>
+    <div class="tech-list">
+      <ul>
+        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+        <li>TensorFlow for deep learning model</li>
+        <li>Matplotlib & Seaborn for visualization</li>
+        <li>Jupyter Notebook for experimentation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💡 Results</h2>
+    <p>
+      The final Random Forest model achieved an accuracy of 96% on test data.
+      Neural Networks performed slightly lower but were valuable for feature insight.
+      The model was deployed locally as a CLI tool for binary classification.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🔍 Lessons Learned</h2>
+    <p>
+      Through this project, I improved my understanding of ML model evaluation,
+      dataset balancing, and binary classification in cybersecurity contexts.
+    </p>
+  </div>
+
+  <div class="section" style="text-align:center;">
+    <a href="https://github.com/zakaria/malware-detection" target="_blank" class="btn-back">🔗 View on GitHub</a>
+  </div>
+
+</body>
+</html>

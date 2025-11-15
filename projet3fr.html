@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Détection de Malwares</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.8;
+      padding: 40px;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 20px 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lang-switch a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      transition: color 0.3s;
+    }
+
+    .lang-switch a:hover { color: #ff7070; }
+
+    h1 { color: #58a6ff; text-align: center; margin-bottom: 20px; }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .tech { color: #7ee787; font-weight: bold; }
+
+    .links a {
+      display: inline-block;
+      margin-top: 12px;
+      margin-right: 10px;
+      background-color: #238636;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .links a:hover { background-color: #2ea043; }
+
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+
+    .btn-back:hover { background-color: #2ea043; }
+
+    ul { padding-left: 20px; }
+    h2 { color: #58a6ff; margin-top: 30px; }
+
+    .video-placeholder {
+      background-color: #0d1117;
+      border: 2px dashed #7ee787;
+      text-align: center;
+      padding: 40px;
+      margin-top: 20px;
+      border-radius: 10px;
+      font-style: italic;
+      color: #7ee787;
+    }
+
+    p.skills {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="projectsfr.html" class="btn-back">⬅ Retour aux projets</a>
+ 
+</nav>
+
+<h1>Projet Détection de Malwares</h1>
+
+<div class="content">
+
+  <h2>💡 Compétences & Défis Réels</h2>
+  <p class="skills">
+    Développement d’un système de détection de malwares avec Machine Learning sur le dataset <strong>EMBER</strong>.  
+    J’ai entraîné des modèles <strong>Random Forest</strong> et <strong>Réseaux de Neurones</strong> pour classifier les fichiers binaires en malveillants ou bénins.  
+    Ce projet m’a permis de gérer le prétraitement des données, l’évaluation de modèles et l’optimisation des performances pour un projet de sécurité informatique réaliste.
+  </p>
+
+  <h2>1️⃣ Prétraitement et Analyse des Données</h2>
+  <ul>
+    <li>Extraction et nettoyage des features à partir de fichiers binaires.</li>
+    <li>Normalisation et encodage des données pour l’apprentissage automatique.</li>
+  </ul>
+
+  <h2>2️⃣ Modélisation avec ML & Deep Learning</h2>
+  <ul>
+    <li>Entraînement de modèles <span class="tech">Random Forest</span> pour baseline solide.</li>
+    <li>Construction et entraînement de <span class="tech">Neural Networks</span> pour améliorer la précision.</li>
+    <li>Évaluation avec métriques pertinentes : précision, recall, F1-score.</li>
+  </ul>
+
+  <h2>🎥 Démonstration Vidéo</h2>
+  <p>
+    <a href="projet3.mp4" target="_blank" 
+       style="display:inline-block; background-color:#238636; color:white; 
+              padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:bold; transition:background 0.3s;">
+      ▶ Watch Project Video
+    </a>
+  </p>
+
+  <p class="tech">Technologies utilisées : Python, Scikit-Learn, TensorFlow, Pandas</p>
+
+  <div class="links">
+    <a href="https://github.com/zakaria/malware-detection" target="_blank">🔗 Voir le code</a>
+  </div>
+
+</div>
+
+</body>
+</html>

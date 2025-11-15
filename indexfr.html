@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zakaria Abou El Ouafa - Ingénieur Data & Cloud</title>
+  <meta name="description" content="Portfolio de ABOU ELOUAFA Zakaria – Ingénieur Data & Cloud spécialisé en Big Data, développement Python, REST API, Airflow, Spark et Google Cloud Platform (GCP).">
+  <meta name="author" content="ABOU ELOUAFA Zakaria">
+
+  <style>
+  /* ===== BASE ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: linear-gradient(135deg, #000000, #001f3f);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 20px 60px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 30px rgba(0, 242, 255, 0.2);
+    border-bottom: 2px solid rgba(0, 242, 255, 0.3);
+    z-index: 100;
+  }
+
+  /* ===== NAVIGATION STYLING ===== */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: all 0.3s;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  nav ul li a:hover {
+    color: #00f2ff;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+    transform: translateY(-2px);
+  }
+
+  nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00f2ff, #00d9ff, #00f2ff);
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+  }
+
+  nav ul li a:hover::before {
+    width: 100%;
+  }
+
+  nav ul li a.active {
+    color: #00f2ff;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+  }
+
+  nav ul li a[href$=".pdf"] {
+    background: linear-gradient(135deg, #00f2ff, #0099ff);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0, 242, 255, 0.4);
+    transition: all 0.3s;
+  }
+
+  nav ul li a[href$=".pdf"]:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, #0099ff, #00f2ff);
+  }
+
+  /* ===== LANGUAGE BUTTON ===== */
+  #lang-btn {
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    background-color: #00f2ff;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.95em;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,242,255,0.5);
+    font-weight: bold;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    animation: fadeIn 1.5s ease;
+    gap: 50px;
+  }
+
+  .text {
+    flex: 1;
+    padding-right: 50px;
+    min-width: 250px;
+  }
+
+  .greeting {
+    font-size: 1.3em;
+    color: #00aced;
+    font-weight: 600;
+    margin-bottom: 15px;
+    animation: fadeInGreeting 1s ease forwards;
+  }
+
+  .text h1 {
+    font-size: 2.8em;
+    color: #00aced;
+    margin-bottom: 5px;
+    height: 1.2em;
+    overflow: hidden;
+    border-right: 3px solid #00aced;
+    white-space: nowrap;
+    animation: typing 4s steps(35, end) forwards, blink 0.8s step-end infinite;
+  }
+
+  .text h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #e2e2e2;
+    animation: fadeInUp 1s ease 0.5s backwards;
+  }
+
+  .text p {
+    margin-top: 25px;
+    font-size: 1.15em;
+    color: #ccc;
+    animation: fadeInUp 1.2s ease 0.7s backwards;
+  }
+
+  .image img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 4px solid #00aced;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 0 40px rgba(0,172,237,0.5);
+    opacity: 0;
+    animation: imageEntry 2.2s ease forwards, float 6s ease-in-out infinite 2.2s;
+  }
+
+  /* ===== ABOUT SECTION ===== */
+  .about {
+    padding: 60px 120px;
+    background-color: #0b0b0b;
+  }
+
+  .about h2 {
+    color: #00aced;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 1.08em;
+    color: #dcdcdc;
+    margin-bottom: 18px;
+    text-align: justify;
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #111;
+    color: #aaa;
+    font-size: 0.9em;
+  }
+
+  @keyframes typing {
+    from { width: 0; border-right-color: #00aced; }
+    to { width: 100%; border-right-color: transparent; }
+  }
+
+  @keyframes blink {
+    0%, 49%, 100% { border-right-color: #00aced; }
+    50%, 99% { border-right-color: transparent; }
+  }
+
+  @keyframes fadeInGreeting {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes imageEntry {
+    0% { opacity: 0; transform: scale(0.3) rotateY(60deg); }
+    100% { opacity: 1; transform: scale(1) rotateY(0deg); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* ===== TABLET & MOBILE RESPONSIVE (768px and below) ===== */
+  @media (max-width: 768px) {
+    #lang-btn {
+      padding: 6px 10px;
+      font-size: 0.8em;
+      top: 10px;
+      left: 15px;
+    }
+
+    nav {
+      padding: 12px 15px;
+      justify-content: center;
+    }
+
+    nav ul {
+      gap: 12px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul li a {
+      font-size: 0.9em;
+    }
+
+    nav ul li a[href$=".pdf"] {
+      padding: 8px 16px;
+      font-size: 0.85em;
+    }
+
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .text {
+      padding-right: 0;
+    }
+
+    .greeting {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .text h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      overflow: visible;
+      border: none;
+      white-space: normal;
+    }
+
+    .text h2 {
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+
+    .text p {
+      margin-top: 15px;
+      font-size: 0.95em;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .image {
+      margin-top: 20px;
+    }
+
+    .image img {
+      width: 200px;
+      height: 200px;
+      border: 3px solid #00aced;
+    }
+
+    .about {
+      padding: 30px 20px;
+    }
+
+    .about h2 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      font-size: 0.95em;
+      margin-bottom: 15px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 20px 15px;
+      font-size: 0.8em;
+    }
+  }
+
+  /* ===== SMALL MOBILE (480px and below) ===== */
+  @media (max-width: 480px) {
+    #lang-btn {
+      padding: 5px 8px;
+      font-size: 0.65em;
+      top: 8px;
+      left: 10px;
+    }
+
+    nav {
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 242, 255, 0.3);
+    }
+
+    nav ul {
+      gap: 8px;
+    }
+
+    nav ul li a {
+      font-size: 0.75em;
+    }
+
+    nav ul li a[href$=".pdf"] {
+      padding: 6px 12px;
+      font-size: 0.7em;
+    }
+
+    .hero {
+      padding: 25px 15px;
+      gap: 15px;
+    }
+
+    .greeting {
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+
+    .text h1 {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+    }
+
+    .text h2 {
+      font-size: 0.95em;
+      margin-top: 10px;
+    }
+
+    .text p {
+      margin-top: 12px;
+      font-size: 0.8em;
+      line-height: 1.4;
+    }
+
+    .image img {
+      width: 140px;
+      height: 140px;
+      border: 2px solid #00aced;
+    }
+
+    .about {
+      padding: 20px 15px;
+    }
+
+    .about h2 {
+      font-size: 1.1em;
+      margin-bottom: 12px;
+    }
+
+    .about p {
+      font-size: 0.8em;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    footer {
+      padding: 15px 10px;
+      font-size: 0.7em;
+    }
+  }
+
+  /* ===== EXTRA SMALL MOBILE (under 360px) ===== */
+  @media (max-width: 360px) {
+    #lang-btn {
+      padding: 4px 6px;
+      font-size: 0.6em;
+      top: 5px;
+      left: 8px;
+    }
+
+    nav {
+      padding: 8px;
+    }
+
+    nav ul {
+      gap: 5px;
+    }
+
+    nav ul li a {
+      font-size: 0.65em;
+    }
+
+    .hero {
+      padding: 20px 12px;
+      gap: 15px;
+    }
+
+    .greeting {
+      font-size: 0.85em;
+    }
+
+    .text h1 {
+      font-size: 1.1em;
+    }
+
+    .text h2 {
+      font-size: 0.85em;
+    }
+
+    .text p {
+      font-size: 0.75em;
+    }
+
+    .image img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .about {
+      padding: 15px 12px;
+    }
+
+    .about h2 {
+      font-size: 1em;
+    }
+
+    .about p {
+      font-size: 0.75em;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <!-- ===== LANGUAGE BUTTON ===== -->
+  <button id="lang-btn" onclick="switchLang()">EN</button>
+  <script>
+    const btn = document.getElementById('lang-btn');
+    if(window.location.pathname.includes("indexfr.html")){
+      btn.textContent = "Voir version anglaise";
+    } else {
+      btn.textContent = "FR";
+    }
+
+    function switchLang(){
+      if(window.location.pathname.includes("indexfr.html")){
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "indexfr.html";
+      }
+    }
+  </script>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <ul>
+      <li><a href="indexfr.html" class="active">À propos de moi</a></li>
+      <li><a href="skillsfr.html">Compétences</a></li>
+      <li><a href="projectsfr.html">Projets</a></li>
+      <li><a href="contactfr.html">Contact</a></li>
+      <li><a href="ABOU_ELOUAFA_Zakaria_CV.pdf" target="_blank" download>Télécharger CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="text">
+      <div class="greeting">👋 Bonjour, bienvenue sur mon portfolio</div>
+      <h1>ABOU ELOUAFA Zakaria</h1>
+      <h2>Ingénieur Junior Data & Cloud</h2>
+      <p>
+        Spécialisé en <strong>Big Data</strong> et <strong>Cloud Computing</strong>, 
+        je conçois et construis des architectures de données scalables qui transforment les données brutes en 
+        informations exploitables. Passionné par <strong>Python, SQL, Airflow, Spark et GCP</strong>, 
+        j'aime connecter les pipelines de données aux systèmes backend modernes pour permettre 
+        une prise de décision intelligente et automatisée.
+      </p>
+    </div>
+
+    <div class="image">
+      <img src="x.jpg" alt="Zakaria Abou El Ouafa">
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about">
+    <h2>À propos de moi</h2>
+    <p>
+      Je suis un ingénieur Data & Cloud passionné par la création de plateformes de données modernes, fiables et cloud-native. 
+      Mon parcours en <strong>Big Data et Cloud Computing</strong> (Master) me permet d'intégrer des pipelines complets – de l'ingestion des données au déploiement – tout en maintenant performance, scalabilité et coût maîtrisé.
+    </p>
+
+    <p>
+      Je m'intéresse particulièrement à la <strong>conception ETL</strong>, aux <strong>systèmes distribués</strong> 
+      et aux <strong>architectures Data Lake</strong> utilisant des technologies comme <strong>Apache Spark</strong>, 
+      <strong>Airflow</strong> et <strong>Google Cloud Platform</strong>. 
+      Mon approche combine rigueur d'ingénierie, curiosité et créativité – visant à faire circuler les données de manière fluide, sécurisée et pertinente.
+    </p>
+
+    <p>
+      Au-delà des pipelines de données, j'apprécie également le <strong>développement</strong> – créer des <strong>scripts Python</strong>, <strong>REST APIs</strong> et <strong>outils d'automatisation</strong> 
+      qui rendent les systèmes plus dynamiques et connectés.  
+      Je maîtrise <strong>Flask</strong> et <strong>FastAPI</strong> pour créer des services backend simples, intégrer des APIs ou exposer des données via des endpoints web.
+    </p>
+
+    <p>
+      Ce mélange de <strong>data engineering</strong>, <strong>développement backend</strong> 
+      et <strong>cloud computing</strong> me permet de créer des solutions complètes – 
+      depuis l'ingestion des données brutes jusqu'au déploiement et au monitoring en production.
+    </p>
+
+    <p>
+      En dehors du travail, j'aime apprendre de nouvelles technologies, expérimenter avec des <strong>outils d'automatisation</strong> et encadrer ceux qui souhaitent entrer dans le monde de la data et du cloud.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Zakaria Abou El Ouafa
+  </footer>
+</body>
+</html>

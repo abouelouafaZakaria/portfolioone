@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Zakaria Abou El Ouafa</title>
+  <meta name="description" content="Contactez Zakaria Abou El Ouafa — Data & Cloud Engineer. Discutons de vos projets data.">
+  <meta name="author" content="ABOU ELOUAFA Zakaria">
+  <style>
+    /* ===== BASE ===== */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#0a0a0a; color:white; font-family:"Poppins", sans-serif; line-height:1.6; min-height:100vh; overflow-x:hidden; position:relative; }
+
+    /* ===== ANIMATED BACKGROUND ===== */
+    .animated-bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background:linear-gradient(135deg,#0a0a0a 0%,#1a0033 50%,#000d1a 100%); animation:gradientShift 15s ease infinite; }
+    @keyframes gradientShift {
+      0%,100%{background:linear-gradient(135deg,#0a0a0a 0%,#1a0033 50%,#000d1a 100%);}
+      33%{background:linear-gradient(135deg,#000d1a 0%,#001a33 50%,#0a0a0a 100%);}
+      66%{background:linear-gradient(135deg,#1a0033 0%,#0a0a0a 50%,#001a33 100%);}
+    }
+
+    /* ===== PARTICLES ===== */
+    .particles{position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;}
+    .particle{position:absolute; background:radial-gradient(circle,#00f2ff 0%,transparent 70%); border-radius:50%; opacity:0.6; animation:particleFloat 20s infinite ease-in-out;}
+    @keyframes particleFloat {
+      0%,100%{transform:translate(0,0) scale(1); opacity:0.6;}
+      25%{transform:translate(100px,-100px) scale(1.2); opacity:0.8;}
+      50%{transform:translate(-50px,-200px) scale(0.8); opacity:0.4;}
+      75%{transform:translate(-150px,-100px) scale(1.1); opacity:0.7;}
+    }
+
+    /* ===== GLOWING LINES ===== */
+    .glow-lines{position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;}
+    .line{position:absolute; background:linear-gradient(90deg,transparent,#00f2ff,transparent); height:2px; width:100%; opacity:0.3; animation:lineMove 8s linear infinite;}
+    @keyframes lineMove{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
+
+    /* ===== NAV ===== */
+    nav{display:flex; justify-content:flex-end; align-items:center; background:rgba(10,10,10,0.95); backdrop-filter:blur(20px); padding:20px 60px; position:sticky; top:0; box-shadow:0 5px 30px rgba(0,242,255,0.2); z-index:100; border-bottom:2px solid rgba(0,242,255,0.3); animation:navSlideDown 0.8s ease;}
+    @keyframes navSlideDown { from{transform:translateY(-100px); opacity:0;} to{transform:translateY(0); opacity:1;} }
+    nav ul{display:flex; list-style:none; gap:35px; flex-wrap:wrap;}
+    nav ul li a{ text-decoration:none; color:white; font-size:1.1em; transition:all 0.3s; position:relative; padding:5px 0;}
+    nav ul li a::before{content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:linear-gradient(90deg,#00f2ff,#00d9ff,#00f2ff); transition:width 0.4s ease; box-shadow:0 0 10px rgba(0,242,255,0.5);}
+    nav ul li a:hover::before{width:100%;}
+    nav ul li a:hover, nav ul li a.active{ color:#00f2ff; text-shadow:0 0 15px rgba(0,242,255,0.8); transform:translateY(-2px);}
+    nav ul li a[href$=".pdf"]{background:linear-gradient(135deg,#00f2ff,#0099ff); color:black; padding:10px 20px; border-radius:25px; font-weight:bold; box-shadow:0 5px 20px rgba(0,242,255,0.4); animation:pulseGlow 2s infinite;}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 5px 20px rgba(0,242,255,0.4);}50%{box-shadow:0 5px 40px rgba(0,242,255,0.8);}}
+    nav ul li a[href$=".pdf"]:hover{transform:translateY(-3px) scale(1.05); background:linear-gradient(135deg,#0099ff,#00f2ff);}
+    nav ul li a[href$=".pdf"]::before{display:none;}
+
+    /* ===== CONTENT ===== */
+    .contact-container{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 40px; min-height:calc(100vh - 80px); position:relative; z-index:1;}
+    h1{color:#00f2ff; font-size:3em; margin-bottom:20px; text-shadow:0 0 30px rgba(0,242,255,0.8); animation:fadeInScale 1s ease; text-align:center; position:relative;}
+    h1::after{content:''; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); width:100px; height:3px; background:linear-gradient(90deg,transparent,#00f2ff,transparent); animation:expandLine 1.5s ease forwards;}
+    @keyframes expandLine{from{width:0;} to{width:150px;}} @keyframes fadeInScale{from{opacity:0; transform:scale(0.8);} to{opacity:1; transform:scale(1);}}
+    form{background:rgba(15,15,30,0.8); backdrop-filter:blur(10px); padding:40px; border-radius:20px; box-shadow:0 5px 30px rgba(0,0,0,0.5); width:90%; max-width:600px; display:flex; flex-direction:column; animation:fadeInUp 1s ease 0.3s backwards; border:2px solid rgba(0,242,255,0.2); position:relative; overflow:hidden;}
+    @keyframes fadeInUp{from{opacity:0; transform:translateY(50px);} to{opacity:1; transform:translateY(0);}}
+    form::before{content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(0,242,255,0.1),transparent); animation:scanLine 3s linear infinite;}
+    @keyframes scanLine{0%{left:-100%;}100%{left:100%;}}
+
+    label{margin-bottom:8px; color:#00f2ff; font-weight:bold; font-size:1.05em; position:relative; z-index:1;}
+    input, textarea{background:rgba(10,10,30,0.8); color:#e6edf3; border:2px solid rgba(0,242,255,0.3); border-radius:10px; padding:12px 15px; margin-bottom:20px; font-size:1rem; transition:all 0.3s ease; font-family:'Poppins',sans-serif; position:relative; z-index:1;}
+    input:focus, textarea:focus{border-color:#00f2ff; outline:none; box-shadow:0 0 15px rgba(0,242,255,0.3); background:rgba(10,10,30,0.95);}
+    textarea{resize:vertical; min-height:120px;}
+    button{background:linear-gradient(135deg,#00f2ff,#0099ff); color:black; border:none; padding:14px 20px; border-radius:25px; font-size:1.1rem; font-weight:bold; cursor:pointer; transition:all 0.3s ease; box-shadow:0 5px 20px rgba(0,242,255,0.4); position:relative; z-index:1;}
+    button:hover{transform:translateY(-3px) scale(1.05); box-shadow:0 8px 30px rgba(0,242,255,0.6); background:linear-gradient(135deg,#0099ff,#00f2ff);}
+
+    /* ===== SOCIALS ===== */
+    .socials{margin-top:40px; text-align:center; animation:fadeInUp 1.2s ease 0.6s backwards;}
+    .socials p{color:#dcdcdc; font-size:1.1em; margin-bottom:15px;}
+    .socials a{color:#00f2ff; margin:0 15px; font-weight:bold; text-decoration:none; transition:all 0.3s ease; display:inline-block;}
+    .socials a:hover{color:#00d9ff; transform:translateY(-3px); text-shadow:0 0 15px rgba(0,242,255,0.8);}
+
+    /* ===== FOOTER ===== */
+    footer{text-align:center; padding:30px; background:rgba(10,10,10,0.95); color:#aaa; font-size:0.95em; border-top:2px solid rgba(0,242,255,0.3); position:relative; z-index:1;}
+    footer::before{content:'💻 Construit avec passion et code'; display:block; color:#00f2ff; margin-bottom:10px; animation:fadeInUp 1s ease;}
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width:900px){ nav{justify-content:center; padding:15px 20px;} .contact-container{padding:60px 30px;} h1{font-size:2.5em;} form{padding:30px;} }
+    @media (max-width:600px){ nav ul{flex-direction:column; gap:12px; align-items:center;} .contact-container{padding:50px 20px;} h1{font-size:2em;} form{padding:25px;} .socials a{display:block; margin:10px 0;} }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="particles" id="particles"></div>
+  <div class="glow-lines" id="glow-lines"></div>
+
+  <nav>
+    <ul>
+      <li><a href="indexfr.html">À propos</a></li>
+      <li><a href="skillsfr.html">Compétences</a></li>
+      <li><a href="projectsfr.html">Projets</a></li>
+      <li><a href="contactfr.html" class="active">Contact</a></li>
+      <li><a href="ABOU_ELOUAFA_Zakaria_CV.pdf" target="_blank" download>Télécharger CV</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-container">
+    <h1>📬 Contactez-moi</h1>
+
+    <form action="https://formspree.io/f/xeorznwn" method="POST">
+      <label for="name">Nom</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="socials">
+      <p>Ou retrouvez-moi sur :</p>
+      <a href="https://gitlab.com/z.abouelouafa" target="_blank">Gitlab</a> |
+      <a href="https://www.linkedin.com/in/abou-elouafa-zakaria-285a72224" target="_blank">LinkedIn</a> |
+      <a href="mailto:z.abouelouafa@example.com">Email</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Zakaria Abou El Ouafa
+  </footer>
+
+  <script>
+    const particlesContainer = document.getElementById('particles');
+    for(let i=0;i<40;i++){
+      const particle=document.createElement('div'); particle.className='particle';
+      particle.style.width=Math.random()*4+2+'px';
+      particle.style.height=particle.style.width;
+      particle.style.left=Math.random()*100+'%';
+      particle.style.top=Math.random()*100+'%';
+      particle.style.animationDelay=Math.random()*20+'s';
+      particle.style.animationDuration=Math.random()*15+15+'s';
+      particlesContainer.appendChild(particle);
+    }
+    const glowLines=document.getElementById('glow-lines');
+    for(let i=0;i<5;i++){
+      const line=document.createElement('div'); line.className='line';
+      line.style.top=(i*20+10)+'%';
+      line.style.animationDelay=i*1.5+'s';
+      glowLines.appendChild(line);
+    }
+  </script>
+</body>
+</html>

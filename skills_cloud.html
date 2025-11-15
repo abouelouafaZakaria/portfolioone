@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Skills - Zakaria Abou El Ouafa</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      margin: 0;
+      padding: 40px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    /* Bouton Back vert en haut à gauche */
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 200;
+    }
+
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 80px auto 0 auto; /* décale vers le bas pour le bouton */
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .skill-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .skill-desc {
+      font-size: 1rem;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="skills.html" class="btn-back">⬅ Back to Skills</a>
+
+  <h1>☁️ Cloud Skills</h1>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <div class="skill-title">BigQuery</div>
+      <div class="skill-desc">
+        Build analytical data warehouses, optimize queries on large datasets, and connect BigQuery with pipelines for real-time insights.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Cloud Storage</div>
+      <div class="skill-desc">
+        Manage structured and unstructured data with lifecycle rules, versioning, and integration into data ingestion workflows.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Pub/Sub</div>
+      <div class="skill-desc">
+        Implement event-driven architectures with asynchronous data ingestion and real-time streaming between distributed systems.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Dataflow</div>
+      <div class="skill-desc">
+        Create and orchestrate scalable ETL and stream processing jobs to clean, transform, and enrich data before loading into BigQuery.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">IAM & Security</div>
+      <div class="skill-desc">
+        Apply identity and access management best practices to secure cloud resources and ensure controlled access within projects.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Cloud Functions</div>
+      <div class="skill-desc">
+        Deploy serverless functions to automate data workflows, API triggers, and cloud-based event handling.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Monitoring & Logging</div>
+      <div class="skill-desc">
+        Use Cloud Monitoring and Cloud Logging to track performance metrics, detect anomalies, and maintain system reliability.
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

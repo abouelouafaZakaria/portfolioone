@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compétences Cloud - Zakaria Abou El Ouafa</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      margin: 0;
+      padding: 40px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    /* Bouton Retour */
+    .btn-back {
+      display: inline-block;
+      background-color: #238636;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 200;
+    }
+
+    .btn-back:hover {
+      background-color: #2ea043;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 80px auto 0 auto;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .skill-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .skill-desc {
+      font-size: 1rem;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="skillsfr.html" class="btn-back">⬅ Retour aux Compétences</a>
+
+  <h1>☁️ Compétences Cloud</h1>
+
+  <div class="skills-container">
+
+    <div class="skill-card">
+      <div class="skill-title">BigQuery</div>
+      <div class="skill-desc">
+        Conception d'entrepôts de données analytiques, optimisation des requêtes sur de grands volumes et connexion de BigQuery à des pipelines pour obtenir des analyses en temps réel.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Cloud Storage</div>
+      <div class="skill-desc">
+        Gestion des données structurées et non structurées avec règles de cycle de vie, versioning et intégration dans des workflows d'ingestion de données.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Pub/Sub</div>
+      <div class="skill-desc">
+        Mise en place d'architectures événementielles avec ingestion asynchrone et streaming en temps réel entre systèmes distribués.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Dataflow</div>
+      <div class="skill-desc">
+        Création et orchestration de jobs ETL et de traitement de flux pour nettoyer, transformer et enrichir les données avant de les charger dans BigQuery.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">IAM & Sécurité</div>
+      <div class="skill-desc">
+        Application des bonnes pratiques de gestion des identités et des accès pour sécuriser les ressources cloud et contrôler les permissions dans les projets.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Cloud Functions</div>
+      <div class="skill-desc">
+        Déploiement de fonctions serverless pour automatiser les workflows de données, déclencheurs d'API et gestion d'événements dans le cloud.
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">Monitoring & Logging</div>
+      <div class="skill-desc">
+        Utilisation de Cloud Monitoring et Cloud Logging pour suivre les métriques, détecter les anomalies et maintenir la fiabilité des systèmes.
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
