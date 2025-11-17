@@ -129,6 +129,19 @@
   <h1>Projet Price Tracker</h1>
 
   <div class="content">
+        <p>
+      Ce projet est un système complet de suivi de prix qui permet aux utilisateurs de surveiller un produit sur le site 
+      <a href="https://madebyfade.com" target="_blank" style="color:#58a6ff;">madebyfade.com</a>
+      et de recevoir automatiquement un email d’alerte lorsque le prix descend en dessous d’un seuil choisi.
+      Le système combine une application web développée avec Flask et HTML (inscription, connexion et interface de suivi des produits)
+      avec un pipeline automatisé orchestré par Airflow.
+      Lorsqu’un utilisateur soumet l’URL d’un produit et un prix souhaité, les informations sont stockées dans PostgreSQL.
+      Toutes les 24 heures, un DAG Airflow récupère toutes les demandes actives, scrape le prix actuel de chaque produit,
+      le compare au seuil défini par l’utilisateur et envoie un email d’alerte si la condition est remplie.
+      Une fois l’alerte envoyée, le produit est automatiquement supprimé de la base de données pour éviter les notifications répétées.
+      Ce projet simule un flux de travail réel en production en combinant développement backend, automatisation, scraping web,
+      gestion de base de données et envoi d’alertes email dans un système intégré.
+    </p>
 
     <h2>💡 Compétences & Défis Réels</h2>
     <p class="skills">

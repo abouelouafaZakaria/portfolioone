@@ -129,6 +129,19 @@
   <h1>Price Tracker Project</h1>
 
   <div class="content">
+        <p>
+      This project is a complete price-tracking system that allows users to monitor a product from the website 
+      <a href="https://madebyfade.com" target="_blank" style="color:#58a6ff;">madebyfade.com</a>
+      and receive an automatic email alert when the price drops below a threshold they choose.
+      The system combines a web application built with Flask and HTML (registration, login, and product tracking interface)
+      with a fully automated data pipeline orchestrated by Airflow.
+      When a user submits a product URL and a desired price threshold, the information is stored in PostgreSQL.
+      Every 24 hours, an Airflow DAG extracts all active user requests, scrapes the current price of each product,
+      compares it with the user-defined threshold, and sends an email alert if the condition is met.
+      Once an alert is sent, the product is automatically removed from the database to avoid repeated notifications.
+      This project simulates a real production workflow by combining backend development, automation, web scraping,
+      database management, and email alerting into a single integrated system.
+    </p>
 
     <h2>💡 Skills & Real-World Challenges</h2>
     <p class="skills">
